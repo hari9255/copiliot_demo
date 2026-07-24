@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Todo List</title>
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body>
+    <main class="app">
+      <header class="app__header">
+        <h1>Todo List</h1>
+        <p>Manage your tasks through the Flask API.</p>
+      </header>
+
+      <form id="todo-form" class="todo-form">
+        <label class="sr-only" for="todo-input">New todo</label>
+        <input
+          id="todo-input"
+          name="todo"
+          type="text"
+          placeholder="What needs to be done?"
+          autocomplete="off"
+          required
+        />
+        <button type="submit">Add todo</button>
+      </form>
+
+      <section id="status" class="status" aria-live="polite"></section>
+
+      <section class="todo-list-section" aria-labelledby="todo-list-title">
+        <div class="todo-list-heading">
+          <h2 id="todo-list-title">Your tasks</h2>
+          <span id="todo-count" class="todo-count">0 tasks</span>
+        </div>
+        <ul id="todo-list" class="todo-list"></ul>
+      </section>
+    </main>
+
+    <script src="app.js"></script>
+  </body>
+</html>
